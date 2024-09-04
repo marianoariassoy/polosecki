@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #767676;
+}
+body {
+  color: var(--color-primary);
+  accent-color: var(--color-secondary);
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 20px;
+}
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+main {
+  padding-left: 18rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.text-medium {
+  font-size: 1rem;
+}

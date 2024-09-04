@@ -1,0 +1,37 @@
+#bars {
+  cursor: pointer;
+  width: 30px;
+  margin-top: 0.25rem;
+}
+#bars > span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  width: 30px;
+}
+#bars > span:not(:last-child) {
+  margin-bottom: 8px;
+}
+#bars,
+#bars > span {
+  transition: all 0.4s ease;
+}
+#bars.active {
+  transform: rotate(45deg);
+  transition-delay: 0.6s;
+}
+#bars.active > span:nth-child(2) {
+  width: 0;
+}
+#bars.active > span:nth-child(1),
+#bars.active > span:nth-child(3) {
+  background-color: currentColor;
+  transition-delay: 0.2s;
+}
+#bars.active > span:nth-child(1) {
+  transform: translateY(9px);
+}
+#bars.active > span:nth-child(3) {
+  background-color: currentColor;
+  transform: translateY(-9px) rotate(90deg);
+}
