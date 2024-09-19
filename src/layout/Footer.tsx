@@ -1,4 +1,4 @@
-import mecenazgo from '../assets/mecenazgo.png'
+import mecenazgo from '../assets/mecenazgo.svg'
 
 const Footer = () => {
   return (
@@ -7,12 +7,13 @@ const Footer = () => {
 
       <img
         src={mecenazgo}
-        alt='mecenazgo'
+        alt='Mecenazgo BA'
+        className='w-32 mb-1'
       />
 
       <hr className='w-12 border-secondary' />
 
-      <div className='flex flex-col font-normal'>
+      <div className='flex flex-col font-normal leading-4 text-xs'>
         <span>Nucleo Audiovisual</span>
         <span>Buenos Aires</span>
       </div>

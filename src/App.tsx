@@ -18,7 +18,11 @@ function App() {
         component={Programas}
       />
       <Route
-        path='/programas/:id/:slug/episodio/:episodio'
+        path='/programas'
+        component={Programas}
+      />
+      <Route
+        path='/programas/:id/:slug/episodio/:ide'
         component={Episodio}
       />
       <Route

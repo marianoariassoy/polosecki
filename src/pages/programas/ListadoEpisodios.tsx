@@ -1,35 +1,23 @@
 import { useLocation } from 'wouter'
 import Items from './Items'
+import useFetch from '../../hooks/useFetch'
+import BeatLoader from 'react-spinners/BeatLoader'
 
-const Episodios = () => {
+interface Data {
+  id: number
+  title: string
+  image: string
+}
+interface Props {
+  data: Data[]
+  loading: boolean
+}
+
+const Episodios = ({ id }: { id: number }) => {
   const [location] = useLocation()
+  const { data, loading } = useFetch(`/episodios-listado/${id}`) as Props
 
-  const data = [
-    {
-      id: 1,
-      title: '#1 - El otro lado',
-      image:
-        'https://images.pexels.com/photos/27574694/pexels-photo-27574694/free-photo-of-blanco-y-negro-paisaje-naturaleza-moda.jpeg?auto=compress&cs=tinysrgb&w=600'
-    },
-    {
-      id: 2,
-      title: '#2 - El otro lado',
-      image:
-        'https://images.pexels.com/photos/27574694/pexels-photo-27574694/free-photo-of-blanco-y-negro-paisaje-naturaleza-moda.jpeg?auto=compress&cs=tinysrgb&w=600'
-    },
-    {
-      id: 3,
-      title: '#3 - El otro lado',
-      image:
-        'https://images.pexels.com/photos/27574694/pexels-photo-27574694/free-photo-of-blanco-y-negro-paisaje-naturaleza-moda.jpeg?auto=compress&cs=tinysrgb&w=600'
-    },
-    {
-      id: 4,
-      title: '#4 - El otro lado',
-      image:
-        'https://images.pexels.com/photos/27574694/pexels-photo-27574694/free-photo-of-blanco-y-negro-paisaje-naturaleza-moda.jpeg?auto=compress&cs=tinysrgb&w=600'
-    }
-  ]
+  if (loading) return <BeatLoader />
 
   return (
     <div className='flex flex-col gap-y-6 max-w-4xl'>

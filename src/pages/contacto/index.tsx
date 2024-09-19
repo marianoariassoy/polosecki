@@ -4,7 +4,7 @@ import Layout from '../../layout/Layout'
 const index = () => {
   return (
     <Layout>
-      <section className='flex flex-col gap-y-4 max-w-3xl'>
+      <section className='flex flex-col gap-y-4 max-w-3xl px-8 lg:px-0'>
         <h1 className='text-secondary'>Contacto</h1>
         <div>
           Para consultas o solicitudes de autorización de uso, por favor comunicarse vía mail a{' '}
